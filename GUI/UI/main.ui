@@ -43,17 +43,17 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QPushButton" name="Geometry">
-          <property name="text">
-           <string>Geometry</string>
-          </property>
-         </widget>
-        </item>
         <item row="2" column="0">
          <widget class="QPushButton" name="Trig">
           <property name="text">
            <string>Trig</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="Geometry">
+          <property name="text">
+           <string>Geometry</string>
           </property>
          </widget>
         </item>
@@ -68,6 +68,13 @@
          <widget class="QPushButton" name="Conversions">
           <property name="text">
            <string>Conversions</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QPushButton" name="Quit_btn">
+          <property name="text">
+           <string>Quit</string>
           </property>
          </widget>
         </item>
