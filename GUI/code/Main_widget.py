@@ -31,3 +31,6 @@ class Main_widget(QMainWindow):
         self.ui.Algebra.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.algebra_widget))
         self.ui.Conversions.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.conversions_widget))
         self.ui.show()
+        self.ui.Quit_btn.clicked.connect(self.Quit_App)
+    def Quit_App(self):
+        QApplication.quit()
