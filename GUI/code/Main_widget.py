@@ -8,20 +8,20 @@ class Main_widget(QMainWindow):
         self.setWindowTitle("Main Widget")
         self.setGeometry(100, 100, 800, 600)
         self.ui = loader.load("GUI/UI/main.ui", self)
+        self.setCentralWidget(self.ui)
         
 
-        self.arithmetic_widget = loader.load("GUI/UI/Arithmetic.ui", self)
+        self.arithmetic_widget = loader.load("GUI/UI/Arithmetic.ui")
         # self.geometry_widget = loader.load("GUI/UI/Geometry.ui", self)
         # self.trig_widget = loader.load("GUI/UI/Trig.ui", self)
         # self.algebra_widget = loader.load("GUI/UI/Algebra.ui", self)
-        # self.conversions_widget = loader.load("GUI/UI/Conversions.ui", self)
+        self.conversions_widget = loader.load("GUI/UI/Conversions.ui")
 
         self.ui.stackedWidget.addWidget(self.arithmetic_widget)
         # self.ui.stackedWidget.addWidget(self.geometry_widget)
         # self.ui.stackedWidget.addWidget(self.trig_widget)
         # self.ui.stackedWidget.addWidget(self.algebra_widget)
-        # self.ui.stackedWidget.addWidget(self.conversions_widget)
-
+        self.ui.stackedWidget.addWidget(self.conversions_widget)
 
 
 
