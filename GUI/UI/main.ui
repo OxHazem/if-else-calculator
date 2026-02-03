@@ -89,13 +89,20 @@
          </sizepolicy>
         </property>
         <property name="currentIndex">
-         <number>4</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="Arithmetic"/>
         <widget class="QWidget" name="Geometry"/>
         <widget class="QWidget" name="Trig"/>
         <widget class="QWidget" name="Algebra"/>
-        <widget class="QWidget" name="Conversions"/>
+        <widget class="QWidget" name="Conversions">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
        </widget>
       </item>
      </layout>
