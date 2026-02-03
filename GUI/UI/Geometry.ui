@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GeometryPage</class>
+
+ <widget class="QWidget" name="GeometryPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>600</height>
+   </rect>
+  </property>
+
+  <layout class="QVBoxLayout" name="verticalLayout">
+
+   <!-- Title -->
+   <item>
+    <widget class="QLabel" name="labelTitle">
+     <property name="text">
+      <string>Geometry</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>22</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Subtitle -->
+   <item>
+    <widget class="QLabel" name="labelSubtitle">
+     <property name="text">
+      <string>Areas, lateral areas, and volumes of geometric shapes</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Tabs -->
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+
+     <!-- ================= AREA TAB ================= -->
+     <widget class="QWidget" name="tabArea">
+      <attribute name="title">
+       <string>Area</string>
+      </attribute>
+
+      <layout class="QVBoxLayout" name="areaLayout">
+
+       <!-- Shape selector -->
+       <item>
+        <layout class="QHBoxLayout" name="areaShapeLayout">
+         <item>
+          <widget class="QLabel" name="labelAreaShape">
+           <property name="text">
+            <string>Shape</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboAreaShape">
+           <item><property name="text"><string>Triangle</string></property></item>
+           <item><property name="text"><string>Circle</string></property></item>
+           <item><property name="text"><string>Square</string></property></item>
+           <item><property name="text"><string>Rectangle</string></property></item>
+           <item><property name="text"><string>Cube</string></property></item>
+           <item><property name="text"><string>Cuboid</string></property></item>
+           <item><property name="text"><string>Cylinder</string></property></item>
+           <item><property name="text"><string>Sphere</string></property></item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+       <!-- Inputs -->
+       <item>
+        <widget class="QGroupBox" name="groupAreaInputs">
+         <property name="title">
+          <string>Inputs</string>
+         </property>
+         <layout class="QFormLayout" name="areaFormLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelAreaInput1">
+            <property name="text">
+             <string>Input 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEditAreaInput1"/>
+          </item>
+
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelAreaInput2">
+            <property name="text">
+             <string>Input 2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEditAreaInput2"/>
+          </item>
+
+          <item row="2" column="0">
+           <widget class="QLabel" name="labelAreaInput3">
+            <property name="text">
+             <string>Input 3</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEditAreaInput3"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+
+       <!-- Result -->
+       <item>
+        <widget class="QGroupBox" name="groupAreaResult">
+         <property name="title">
+          <string>Area Result</string>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding"/>
+         </property>
+         <layout class="QVBoxLayout">
+          <item>
+           <widget class="QLabel" name="labelAreaResult">
+            <property name="text">
+             <string>—</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>16</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+
+     <!-- ================= LATERAL AREA TAB ================= -->
+     <widget class="QWidget" name="tabLateral">
+      <attribute name="title">
+       <string>Lateral Area</string>
+      </attribute>
+
+      <layout class="QVBoxLayout" name="lateralLayout">
+
+       <item>
+        <layout class="QHBoxLayout">
+         <item><widget class="QLabel"><property name="text"><string>Shape</string></property></widget></item>
+         <item>
+          <widget class="QComboBox" name="comboLateralShape">
+           <item><property name="text"><string>Cone</string></property></item>
+           <item><property name="text"><string>Pyramid</string></property></item>
+           <item><property name="text"><string>Cube</string></property></item>
+           <item><property name="text"><string>Cuboid</string></property></item>
+           <item><property name="text"><string>Cylinder</string></property></item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+       <item>
+        <widget class="QGroupBox">
+         <property name="title"><string>Inputs</string></property>
+         <layout class="QFormLayout">
+          <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Input 1</string></property></widget></item>
+          <item row="0" column="1"><widget class="QLineEdit"/></item>
+          <item row="1" column="0"><widget class="QLabel"><property name="text"><string>Input 2</string></property></widget></item>
+          <item row="1" column="1"><widget class="QLineEdit"/></item>
+          <item row="2" column="0"><widget class="QLabel"><property name="text"><string>Input 3</string></property></widget></item>
+          <item row="2" column="1"><widget class="QLineEdit"/></item>
+         </layout>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QGroupBox">
+         <property name="title"><string>Lateral Area Result</string></property>
+         <property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"/></property>
+         <layout class="QVBoxLayout">
+          <item>
+           <widget class="QLabel">
+            <property name="text"><string>—</string></property>
+            <property name="alignment"><set>Qt::AlignCenter</set></property>
+            <property name="font"><font><pointsize>16</pointsize><bold>true</bold></font></property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+
+     <!-- ================= VOLUME TAB ================= -->
+     <widget class="QWidget" name="tabVolume">
+      <attribute name="title">
+       <string>Volume</string>
+      </attribute>
+
+      <layout class="QVBoxLayout" name="volumeLayout">
+
+       <item>
+        <layout class="QHBoxLayout">
+         <item><widget class="QLabel"><property name="text"><string>Shape</string></property></widget></item>
+         <item>
+          <widget class="QComboBox" name="comboVolumeShape">
+           <item><property name="text"><string>Cylinder</string></property></item>
+           <item><property name="text"><string>Sphere</string></property></item>
+           <item><property name="text"><string>Cuboid</string></property></item>
+           <item><property name="text"><string>Cube</string></property></item>
+           <item><property name="text"><string>Pyramid</string></property></item>
+           <item><property name="text"><string>Cone</string></property></item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+       <item>
+        <widget class="QGroupBox">
+         <property name="title"><string>Inputs</string></property>
+         <layout class="QFormLayout">
+          <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Input 1</string></property></widget></item>
+          <item row="0" column="1"><widget class="QLineEdit"/></item>
+          <item row="1" column="0"><widget class="QLabel"><property name="text"><string>Input 2</string></property></widget></item>
+          <item row="1" column="1"><widget class="QLineEdit"/></item>
+          <item row="2" column="0"><widget class="QLabel"><property name="text"><string>Input 3</string></property></widget></item>
+          <item row="2" column="1"><widget class="QLineEdit"/></item>
+         </layout>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QGroupBox">
+         <property name="title"><string>Volume Result</string></property>
+         <property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"/></property>
+         <layout class="QVBoxLayout">
+          <item>
+           <widget class="QLabel">
+            <property name="text"><string>—</string></property>
+            <property name="alignment"><set>Qt::AlignCenter</set></property>
+            <property name="font"><font><pointsize>16</pointsize><bold>true</bold></font></property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+
+    </widget>
+   </item>
+
+  </layout>
+ </widget>
+
+ <resources/>
+ <connections/>
+</ui>
