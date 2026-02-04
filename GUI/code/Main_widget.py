@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import QMainWindow , QApplication
 from PySide6.QtUiTools import QUiLoader
+from GUI.code.Conversions import Conversions_page
 loader = QUiLoader() 
 class Main_widget(QMainWindow):
     
@@ -15,7 +16,7 @@ class Main_widget(QMainWindow):
         self.geometry_widget = loader.load("GUI/UI/Geometry.ui", self)
         self.trig_widget = loader.load("GUI/UI/Trignometery.ui", self)
         self.algebra_widget = loader.load("GUI/UI/Algebra.ui", self)
-        self.conversions_widget = loader.load("GUI/UI/Conversions.ui")
+        self.conversions_widget = Conversions_page()
 
         self.ui.stackedWidget.addWidget(self.arithmetic_widget)
         self.ui.stackedWidget.addWidget(self.geometry_widget)
@@ -30,7 +31,7 @@ class Main_widget(QMainWindow):
         self.ui.Trig.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.trig_widget))
         self.ui.Algebra.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.algebra_widget))
         self.ui.Conversions.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.conversions_widget))
-        self.ui.show()
         self.ui.Quit_btn.clicked.connect(self.Quit_App)
+        self.ui.show()
     def Quit_App(self):
         QApplication.quit()
