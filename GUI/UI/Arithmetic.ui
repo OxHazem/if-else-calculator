@@ -64,7 +64,7 @@
        </property>
        <layout class="QVBoxLayout">
         <item>
-         <widget class="QPlainTextEdit" name="Numbers_TextEdit">
+         <widget class="QPlainTextEdit" name="numbers">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
