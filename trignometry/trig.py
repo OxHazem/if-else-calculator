@@ -6,6 +6,10 @@ def degrees_to_radians(degrees: float) -> float:
     validate_non_negative(degrees, "Angle")
     return math.radians(degrees)
 
+def radians_to_degrees(radians: float) -> float:
+    validate_non_negative(radians, "Angle")
+    return math.degrees(radians)
+
 
 def sine(degrees: float) -> float:
     validate_non_negative(degrees, "Angle")
