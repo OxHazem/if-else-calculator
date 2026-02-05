@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import QMainWindow , QApplication
 from PySide6.QtUiTools import QUiLoader
 from GUI.code.Conversions import Conversions_page
+from GUI.code.Algebra import Algebra_page
 from GUI.code.Arithmetic import Arithmetic_page
 loader = QUiLoader() 
 class Main_widget(QMainWindow):
@@ -16,7 +17,7 @@ class Main_widget(QMainWindow):
         self.arithmetic_widget = Arithmetic_page()
         self.geometry_widget = loader.load("GUI/UI/Geometry.ui", self)
         self.trig_widget = loader.load("GUI/UI/Trignometery.ui", self)
-        self.algebra_widget = loader.load("GUI/UI/Algebra.ui", self)
+        self.algebra_widget = Algebra_page()
         self.conversions_widget = Conversions_page()
 
         self.ui.stackedWidget.addWidget(self.arithmetic_widget)
