@@ -77,56 +77,56 @@
       <item>
        <layout class="QHBoxLayout">
         <item>
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="label_1">
           <property name="text">
            <string>Result 1:</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="lineEdit_1"/>
         </item>
        </layout>
       </item>
       <item>
        <layout class="QHBoxLayout">
         <item>
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="label_2">
           <property name="text">
            <string>Result 2:</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="lineEdit_2"/>
         </item>
        </layout>
       </item>
       <item>
        <layout class="QHBoxLayout">
         <item>
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="label_3">
           <property name="text">
            <string>Result 3:</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="lineEdit_3"/>
         </item>
        </layout>
       </item>
       <item>
        <layout class="QHBoxLayout">
         <item>
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="label_4">
           <property name="text">
            <string>Result 4:</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="lineEdit_4"/>
         </item>
        </layout>
       </item>
