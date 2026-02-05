@@ -4,6 +4,7 @@ from GUI.code.Conversions import Conversions_page
 from GUI.code.Algebra import Algebra_page
 from GUI.code.Arithmetic import Arithmetic_page
 from GUI.code.Trignometery import Trignometery_page
+from GUI.code.Geometery import Geometry_page
 loader = QUiLoader() 
 class Main_widget(QMainWindow):
     
@@ -16,7 +17,7 @@ class Main_widget(QMainWindow):
         
 
         self.arithmetic_widget = Arithmetic_page()
-        self.geometry_widget = loader.load("GUI/UI/Geometry.ui", self)
+        self.geometry_widget = Geometry_page()
         self.trig_widget = Trignometery_page()
         self.algebra_widget = Algebra_page()
         self.conversions_widget = Conversions_page()
