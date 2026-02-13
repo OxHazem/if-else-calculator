@@ -14,6 +14,8 @@ class Main_widget(QMainWindow):
         self.setGeometry(100, 100, 800, 600)
         self.ui = loader.load("GUI/UI/main.ui", self)
         self.setCentralWidget(self.ui)
+
+        
         
 
         self.arithmetic_widget = Arithmetic_page()
