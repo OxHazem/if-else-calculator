@@ -1,71 +1,102 @@
+Here is the updated version with the GUI folder added clearly inside the project architecture section, written in a clean and natural way.
 
+---
 
-```markdown
 # MathSuite – Modular Mathematical Toolkit (Python)
 
-MathSuite is a modular, extensible **desktop-ready mathematical toolkit** built in Python.  
-It started as a beginner CLI calculator and evolved into a **professionally structured application** designed for scalability, testing, and GUI integration.
+MathSuite is a modular and extensible desktop-ready mathematical toolkit built in Python. It began as a beginner command-line calculator and gradually evolved into a professionally structured application designed for scalability, maintainability, testing, and GUI integration.
 
-The project covers a wide range of mathematical operations including arithmetic, geometry, trigonometry, algebra, and unit conversions, with a clean separation between **logic** and **user interface**.
+The project covers arithmetic, geometry, trigonometry, algebra, and unit conversions, with a clear separation between logic and user interface layers.
 
 ---
 
-## 🚀 Features
+## Features
 
-### 🔢 Arithmetic
-- Addition
-- Subtraction
-- Multiplication
-- Division
-- Power operations
+### Arithmetic
 
-### 📐 Geometry
+* Addition
+* Subtraction
+* Multiplication
+* Division
+* Power operations
+
+### Geometry
+
 **Areas**
-- Triangle (Heron's formula)
-- Circle, Square, Rectangle
-- Cube, Cuboid
-- Cylinder, Sphere
+
+* Triangle (Heron’s formula)
+* Circle
+* Square
+* Rectangle
+* Cube
+* Cuboid
+* Cylinder
+* Sphere
 
 **Volumes**
-- Cube, Cuboid
-- Cylinder, Sphere
-- Cone, Pyramid
+
+* Cube
+* Cuboid
+* Cylinder
+* Sphere
+* Cone
+* Pyramid
 
 **Lateral Areas**
-- Cone
-- Pyramid
-- Cube
-- Cuboid
-- Cylinder
 
-### 📐 Trigonometry
-- sin, cos, tan
-- sec, csc, cot  
-(Implemented using Taylor series approximation)
+* Cone
+* Pyramid
+* Cube
+* Cuboid
+* Cylinder
 
-### 🧮 Algebra
-- Quadratic equation solver
-- Handles:
-  - Linear equations
-  - One root, two roots
-  - Complex roots
-  - Infinite or no-solution cases
+### Trigonometry
 
-### 🔁 Unit Conversions
+* sin
+* cos
+* tan
+* sec
+* csc
+* cot
+
+Implemented using Taylor series approximation.
+
+### Algebra
+
+* Quadratic equation solver
+
+Handles:
+
+* Linear equations
+* One real root
+* Two real roots
+* Complex roots
+* Infinite solutions
+* No-solution cases
+
+### Unit Conversions
+
 **Weight**
-- Milligrams, Grams, Kilograms, Tons
+
+* Milligrams
+* Grams
+* Kilograms
+* Tons
 
 **Length**
-- Millimeters, Centimeters, Meters, Kilometers
+
+* Millimeters
+* Centimeters
+* Meters
+* Kilometers
 
 ---
 
-## 🧱 Project Architecture
+## Project Architecture
 
-The project follows a **clean, modular structure**:
+The project follows a clean, modular, and GUI-ready structure:
 
 ```
-
 math_cli/
 │
 ├── main.py
@@ -92,81 +123,73 @@ math_cli/
 │   ├── validators.py
 │   └── input_handler.py
 │
+├── GUI/
+│   ├── code/
+│   │   ├── main.py
+│   │   ├── pages/
+│   │   └── components/
+│   │
+│   ├── UI/
+│   │   └── .ui files (Qt Designer)
+│   │
+│   └── style/
+│       └── .qss stylesheets
+│
 └── README.md
+```
 
-````
+### Architecture Principles
 
-### Design Principles
-- **Separation of concerns**
-- **Pure functions** (no input/print inside logic)
-- **Reusable modules**
-- **GUI-ready architecture**
+* Separation of concerns
+* Pure logic functions (no input/output inside core modules)
+* Reusable mathematical modules
+* Independent GUI layer
+* Scalable folder organization
 
----
-
-## 🖥️ Current Interface
-
-- Command-Line Interface (CLI)
-- Dictionary-based menus
-- Robust input validation and error handling
+The mathematical engine is completely independent from the interface layer, which allows the same logic to power both the CLI and the PyQt desktop GUI without duplication.
 
 ---
 
-## 🎯 Planned Enhancements (Next Versions)
+## Interfaces
 
-- ✅ Professional **PyQt desktop GUI**
-- ✅ Sidebar navigation with multiple pages
-- ✅ Dark/Light mode
-- ⏳ Graph plotting (quadratic & trigonometry)
-- ⏳ Expression parsing (e.g. `3+4*2`)
-- ⏳ Unit tests
-- ⏳ Packaging as a desktop application
+### Command-Line Interface (CLI)
 
----
-
-## 🛠️ Technologies Used
-
-- Python 3
-- Standard Library (`math`)
-- PyQt (planned GUI)
-- Modular architecture (package-based design)
-
----
-
-## 📚 What I Learned
-
-- Writing clean, reusable Python functions
-- Organizing large projects into modules
-- Input validation and error handling
-- Mathematical modeling and numerical methods
-- Designing software with future GUI integration in mind
-- Transitioning from beginner scripts to professional codebases
-
----
-
-## ▶️ How to Run (CLI Version)
-
-```bash
-python main.py
-````
-
----
-
-## 📌 Author
-
-**Omar Hazem Ahmed**
-
-This project represents my progression from beginner-level Python to structured, scalable software design.
-
----
-
-## ⭐ Why This Project Matters
-
-This project demonstrates:
-
-* Growth mindset
-* Clean architecture
-* Strong foundations for GUI and advanced features
-* Readiness for real-world software development
+Run from the project root:
 
 ```
+python main.py
+```
+
+### Desktop GUI (PyQt)
+
+Run from the project root:
+
+```
+python -m GUI.code.main
+```
+
+The GUI version includes:
+
+* Sidebar navigation
+* Multi-page structure
+* External stylesheet support
+* Structured page-based design
+
+---
+
+## Technologies Used
+
+* Python 3
+* Python Standard Library
+* PyQt
+* Qt Designer
+* QSS for styling
+* Modular package-based architecture
+
+---
+
+## Author
+
+Omar Hazem Ahmed
+
+This project represents the transition from beginner scripts to structured, scalable, and GUI-integrated software design.
