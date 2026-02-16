@@ -1,6 +1,4 @@
-Here is the updated version with the GUI folder added clearly inside the project architecture section, written in a clean and natural way.
 
----
 
 # MathSuite – Modular Mathematical Toolkit (Python)
 
