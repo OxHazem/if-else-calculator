@@ -1,10 +1,8 @@
-
-
 # MathSuite – Modular Mathematical Toolkit (Python)
 
-MathSuite is a modular and extensible desktop-ready mathematical toolkit built in Python. It began as a beginner command-line calculator and gradually evolved into a professionally structured application designed for scalability, maintainability, testing, and GUI integration.
+MathSuite is a modular and extensible desktop-ready mathematical toolkit built in Python. It began as a beginner command-line calculator and evolved into a professionally structured application designed for scalability, maintainability, testing, and GUI integration.
 
-The project covers arithmetic, geometry, trigonometry, algebra, and unit conversions, with a clear separation between logic and user interface layers.
+The project covers arithmetic, geometry, trigonometry, algebra, and unit conversions, with a strict separation between logic and interface layers.
 
 ---
 
@@ -18,9 +16,11 @@ The project covers arithmetic, geometry, trigonometry, algebra, and unit convers
 * Division
 * Power operations
 
+---
+
 ### Geometry
 
-**Areas**
+#### Areas
 
 * Triangle (Heron’s formula)
 * Circle
@@ -31,7 +31,7 @@ The project covers arithmetic, geometry, trigonometry, algebra, and unit convers
 * Cylinder
 * Sphere
 
-**Volumes**
+#### Volumes
 
 * Cube
 * Cuboid
@@ -40,13 +40,15 @@ The project covers arithmetic, geometry, trigonometry, algebra, and unit convers
 * Cone
 * Pyramid
 
-**Lateral Areas**
+#### Lateral Areas
 
 * Cone
 * Pyramid
 * Cube
 * Cuboid
 * Cylinder
+
+---
 
 ### Trigonometry
 
@@ -58,6 +60,8 @@ The project covers arithmetic, geometry, trigonometry, algebra, and unit convers
 * cot
 
 Implemented using Taylor series approximation.
+
+---
 
 ### Algebra
 
@@ -72,16 +76,18 @@ Handles:
 * Infinite solutions
 * No-solution cases
 
+---
+
 ### Unit Conversions
 
-**Weight**
+#### Weight
 
 * Milligrams
 * Grams
 * Kilograms
 * Tons
 
-**Length**
+#### Length
 
 * Millimeters
 * Centimeters
@@ -144,7 +150,7 @@ math_cli/
 * Independent GUI layer
 * Scalable folder organization
 
-The mathematical engine is completely independent from the interface layer, which allows the same logic to power both the CLI and the PyQt desktop GUI without duplication.
+The mathematical engine is completely independent from the interface layer, allowing the same logic to power both the CLI and the desktop GUI without duplication.
 
 ---
 
@@ -154,15 +160,17 @@ The mathematical engine is completely independent from the interface layer, whic
 
 Run from the project root:
 
-```
+```bash
 python main.py
 ```
+
+---
 
 ### Desktop GUI (PyQt)
 
 Run from the project root:
 
-```
+```bash
 python -m GUI.code.main
 ```
 
@@ -175,6 +183,59 @@ The GUI version includes:
 
 ---
 
+## Docker Support
+
+MathSuite can be executed inside a Docker container for environment isolation and reproducibility.
+
+### Build Docker Image
+
+From the project root:
+
+```bash
+docker build -t mathsuite:latest .
+```
+
+---
+
+### Run CLI via Docker
+
+```bash
+docker run --rm -it mathsuite:latest python main.py
+```
+
+* `--rm` automatically removes the container after exit
+* `-it` enables interactive terminal mode
+
+---
+
+### Run Desktop GUI via Docker (Linux – X11)
+
+Allow Docker to access your display:
+
+```bash
+xhost +local:docker
+```
+
+Then run:
+
+```bash
+docker run --rm -it \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  mathsuite:latest \
+  python -m GUI.code.main
+```
+
+Explanation:
+
+* `-e DISPLAY=$DISPLAY` connects the container to the host display
+* `-v /tmp/.X11-unix:/tmp/.X11-unix` shares the X11 socket
+* `--rm` prevents accumulation of stopped containers
+
+> Note: GUI execution via Docker is supported on Linux systems using X11.
+
+---
+
 ## Technologies Used
 
 * Python 3
@@ -182,6 +243,7 @@ The GUI version includes:
 * PyQt
 * Qt Designer
 * QSS for styling
+* Docker
 * Modular package-based architecture
 
 ---
@@ -190,4 +252,5 @@ The GUI version includes:
 
 Omar Hazem Ahmed
 
-This project represents the transition from beginner scripts to structured, scalable, and GUI-integrated software design.
+This project represents the transition from beginner scripts to structured, scalable, and GUI-integrated software design, combining clean architecture principles with containerized deployment practices.
+
